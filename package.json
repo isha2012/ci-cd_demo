@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node src/app.ts",
-    "dev": "nodemon --watch src --ext ts --exec ts-node src/app.ts"
+    "build": "npx tsc",
+   "start": "node dist/server.js",
+  "dev": "nodemon --watch src --ext ts --exec ts-node server.ts",
+  "test": "jest --config jest.config.js",
+  "test:watch": "jest --watch"
   },
   "keywords": [],
   "author": "",
