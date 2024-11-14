@@ -6,6 +6,9 @@ const PORT = process.env.PORT || 3000;
 app.get('/', (req: Request, res: Response) => {
   res.json({ message: 'Hello, GitHub Actions!' });
 });
+app.get('/test', (req: Request, res: Response) => {
+  res.json({ message: 'Hello, GitHub Actions! Testing Pull Request.' });
+});
 
 // Export the app for testing purposes
 export default app;
