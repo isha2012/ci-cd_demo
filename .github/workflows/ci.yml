@@ -37,7 +37,7 @@ jobs:
 
       # Step 4: Build the TypeScript code
       - name: Build project
-        run: npm run build
+        run: npx tsc
 
       # Step 5: Run tests (we haven't added any tests yet, so this will skip)
     #   - name: Run tests
