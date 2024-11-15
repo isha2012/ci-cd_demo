@@ -2,9 +2,10 @@
 name: Pull Request CI
 
 on:
-  pull_request:
-    branches:
-      - main  # Only run this workflow on pull requests targeting the `main` branch
+    pull_request:
+        branches: [ "main" ]
+    merge_group:
+        types: [checks_requested]
 
 jobs:
   test:
