@@ -8,7 +8,7 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.get('/test', (req: Request, res: Response) => {
-  res.json({ message: 'Hello, GitHub Actions! Testing Pull Request.' });
+  res.json({ message: 'Hello, GitHub Actions! Testing Pull Request. This route has been updated' });
 });
 app.get('/about', (req: Request, res: Response) => {
   res.json({ message: 'Hello, GitHub Actions! About Us branch.' });
