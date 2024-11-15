@@ -13,6 +13,9 @@ app.get('/test', (req: Request, res: Response) => {
 app.get('/about', (req: Request, res: Response) => {
   res.json({ message: 'Hello, GitHub Actions! About Us branch.' });
 });
+app.get('/prTest2', (req: Request, res: Response) => {
+  res.json({ message: 'Hello, GitHub Actions! This is 2nd pr.' });
+});
 
 // Export the app for testing purposes
 export default app;
