@@ -9,6 +9,9 @@ app.get('/', (req: Request, res: Response) => {
 app.get('/test', (req: Request, res: Response) => {
   res.json({ message: 'Hello, GitHub Actions! Testing Pull Request.' });
 });
+app.get('/prTest', (req: Request, res: Response) => {
+  res.json({ message: 'Hello, GitHub Actions! Testing merges.' });
+});
 
 // Export the app for testing purposes
 export default app;
