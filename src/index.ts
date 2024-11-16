@@ -16,6 +16,9 @@ app.get('/about', (req: Request, res: Response) => {
 app.get('/cache', (req: Request, res: Response) => {
   res.json({ message: 'Hello, GitHub Actions! Testing cache.' });
 });
+app.get('/pullRequest', (req: Request, res: Response) => {
+  res.json({ message: 'Hello, GitHub Actions! Testing pull reuqest.' });
+});
 
 // Export the app for testing purposes
 export default app;
