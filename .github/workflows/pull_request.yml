@@ -2,7 +2,7 @@ name: Pull Request CI
 
 on:
     pull_request:
-        branches: [ "prTest2" ]
+        branches: [ "prTest1" ]
 
 jobs:
   test:
