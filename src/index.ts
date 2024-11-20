@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
+import app  from './server';
 
-const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req: Request, res: Response) => {
@@ -19,6 +19,8 @@ app.get('/cache', (req: Request, res: Response) => {
 app.get('/pullReqTest', (req: Request, res: Response) => {
   res.json({ message: 'Hello, GitHub Actions! Testing pull reuqest 2nd time.' });
 });
+app.get('/getSecrete', (req: Request, res: Response) => {
+  res.json({ message: 'Hello, GitHub Actions! Testing Secret Management' });
+});
 
 // Export the app for testing purposes
-export default app;
