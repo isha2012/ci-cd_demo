@@ -1,14 +1,18 @@
-// tests/app.test.ts
-
 import request from 'supertest';
-import app from '../server';
+import app from '../server'; // Assuming your app is exported from the server file
 import http from 'http';
 
 let server: http.Server;
+let port: number;
 
-beforeAll(() => {
-  // Start the server
-  server = app.listen(3000);
+beforeAll((done) => {
+  // Start the server on a random port
+  server = app.listen(0, () => {
+    // Get the assigned port
+    port = (server.address() as http.AddressInfo).port;
+    console.log(`Server is running on http://localhost:${port}`);
+    done();
+  });
 });
 
 afterAll((done) => {
@@ -28,5 +32,3 @@ describe('Express App', () => {
     expect(response.status).toBe(404);
   });
 });
-
-
