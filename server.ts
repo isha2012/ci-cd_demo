@@ -1,13 +1,13 @@
-// import app from './src/index';
 import express from 'express';
-
 import dotenv from 'dotenv';
+import router from './src';
+
 const app = express();
-const PORT = process.env.PORT || 3000;
 dotenv.config();
 
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+app.use('/', router);
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
 });
 
 export default app;
