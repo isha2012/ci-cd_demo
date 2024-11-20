@@ -1,7 +1,7 @@
 // tests/app.test.ts
 
 import request from 'supertest';
-import app from '../src';
+import app from '../server';
 
 describe('Express App', () => {
   it('should return 200 OK and a welcome message for GET /', async () => {
