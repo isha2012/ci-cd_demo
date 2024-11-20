@@ -1,6 +1,7 @@
 import request from 'supertest';
 import app from '../server'; // Assuming your app is exported from the server file
 import http from 'http';
+import net from 'net';
 
 let server: http.Server;
 let port: number;
@@ -9,7 +10,7 @@ beforeAll((done) => {
   // Start the server on a random port
   server = app.listen(0, () => {
     // Get the assigned port
-    port = (server.address() as http.AddressInfo).port;
+    port = (server.address() as net.AddressInfo).port;
     console.log(`Server is running on http://localhost:${port}`);
     done();
   });
