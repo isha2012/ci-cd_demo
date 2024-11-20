@@ -2,6 +2,19 @@
 
 import request from 'supertest';
 import app from '../server';
+import http from 'http';
+
+let server: http.Server;
+
+beforeAll(() => {
+  // Start the server
+  server = app.listen(3000);
+});
+
+afterAll((done) => {
+  // Close the server after all tests
+  server.close(done);
+});
 
 describe('Express App', () => {
   it('should return 200 OK and a welcome message for GET /', async () => {
@@ -15,3 +28,5 @@ describe('Express App', () => {
     expect(response.status).toBe(404);
   });
 });
+
+
